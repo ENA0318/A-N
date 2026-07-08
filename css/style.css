@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+        html{ scroll-behavior: smooth; overflow-x: hidden;}
+        *{margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
+        a{ text-decoration: none; color: #222;}
+        @font-face{ font-family: GowunDodum;  src: url(../font/Gowun_Dodum/GowunDodum-Regular.ttf);}
+        @font-face{ font-family: GmarketSans;  
+            src: url(../font/GmarketSans/GmarketSansBold.otf);
+            font-weight: 700;}
+        @font-face{ font-family: GmarketSans;  
+            src: url(../font/GmarketSans/GmarketSansMedium.otf);
+            font-weight: 500;}
+        @font-face{ font-family: GmarketSans;  
+            src: url(../font/GmarketSans/GmarketSansLight.otf);
+            font-weight: 300;}
+        p{ font-size: 1.56rem; font-family: "GowunDodum",'Noto Sans KR', 'Inter';}
+        h1, h2{ font-family: "GmarketSans",'Noto Sans KR', 'Inter';}
+
+header{ }
+.site-wrap{ width: 100%; height: 80px; padding: 20px 55px; display: flex; align-items: center; justify-content: space-between; position: relative;}
+.top-logo{ width: 120px;}
+.site-nav{ width: 100%; height: 80px; display: flex; flex: 1;justify-content: space-between; align-items: center; }
+.nav-left{ position: absolute; left: 50%; transform: translateX(-50%); font-family: "GmarketSans",'Noto Sans KR', 'Inter'; font-weight: 500;}
+.nav-left ul{ width: 80%;  margin: auto; display: flex; justify-content: center; }
+.nav-left ul li{ display: inline-block; height: 20px; 
+    /* background: red; */}
+.nav-left ul li a{ display: block; height: 20px; line-height: 20px; padding: 0 40px; font-size: 1.5rem;}
+.nav-left ul li a:hover{ color: #b74750; text-shadow: 0 0 4px #9240473b;}
+.nav-left .active{ color: #b74750; text-shadow: 0 0 4px #9240473b;}
+
+.nav-right{ margin-left: auto; }
+.nav-right > ul{ display: flex; align-items: center; position: relative;
+    width: 100%; /* background: pink; */}
+.nav-right ul li{ position: relative;}
+.nav-right > ul > li > a{ display: block; height: 80px; line-height: 80px; padding: 0 16px; font-size: 0.9rem;}
+.submenu {  display: none; position: absolute; background: #fff; z-index: 999;}
+.nav-right .submenu a{ display: block; padding: 6px 23px; text-align: center; /* background: yellow; */ border-bottom: 2px solid #e0d1aa;}
+.nav-right .submenu li:last-child a{ border-bottom: none;}
+.nav-right ul li:hover .submenu{ display: block;}
+.nav-right .submenu a:hover{ background: #642a2f; color: #fff; border-color: transparent;}
+.hamburger{ display: none; background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #222; }  /* 데스크탑 숨김, 모바일에서만 표시 */
+.nav-backdrop{ display: none; }  /* 데스크탑 숨김 */
+
+/* ---------------------------------------------- */
+.banner img{ width: 100%; position: relative; border-radius: 0 0 180px 180px;}
+.banner .title-sub{ position: absolute; top: 260px; right: 270px; font-size: 2.8rem; color: #e0d1aa; text-shadow: 2px 2px 6px rgba(0,0,0,0.8);}
+.title2{ position: absolute; right: -100px; padding-top: 20px;}
+
+.main-logo{ padding: 80px 0 200px;}
+
+/* ---------------------------------------------- */
+.intro{ width: 80%; margin: auto; margin-bottom: 300px;}
+.contact{ }
+
+.list{ margin-bottom: 300px; }
+.list > ul{ position: relative; display: flex; align-items: center; justify-content: center; gap: 60px; }
+.list > ul > li{ position: relative; flex: 1; cursor: pointer;}
+.list-101  img { border-radius: 30px; width: 100%; display: block;}
+.list-201  img { border-radius: 30px; width: 100%; display: block;}
+.list-301  img { border-radius: 30px; width: 100%; display: block;}
+
+
+.hover-info{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 60px;
+    opacity: 0; transition: opacity 0.3s; border-radius: 30px;} 
+.list-101 .hover-info{  background: rgba(8,24,32,0.5);}
+.list-201 .hover-info{  background: rgba(77,31,11,0.5);}
+.list-301 .hover-info{  background: rgba(16,24,17,0.5);}
+
+.hover-info h1{ position: absolute; top: 180px; left: 52%; transform: translateX(-50%) scaleX(120%); 
+    color: #fff; font-size: 4.5rem; font-weight: 700; letter-spacing: 20px; text-align: center; font-weight: 700; transition: all 0.3s; }
+.hover-info img{ width: 120px; position: absolute; bottom: 150px; right: 60px;}
+.hover-info img:hover{ animation: arrowmove 0.6s infinite alternate;}
+@keyframes arrowmove{ 
+    from { transform: translateX(0);}
+    to{ transform: translateX(30px);}}
+.hover-info:hover h1{ transform: translateX(-50%) scaleX(120%) translateY(-30px); }
+
+.list > ul > li:hover .hover-info { opacity: 1; }
+
+        /* ---------------------------------------------- */
+.preview{ }
+.preview ul{ display: flex; flex-direction: column; gap: 80px;}
+.pr-1, .pr-2{ display: flex; gap: 40px;}
+.pr-1{ align-items: flex-end;}
+.pr-2{ align-items: flex-start; flex-direction: row-reverse; }
+.preview > ul > img{ width: 100vw; position: relative; left: 50%; transform: translateX(-50%);}
+.preview .pr-1 img { width: 50%; border-radius: 30px;} 
+.preview .pr-2 img { width: 50%; border-radius: 30px;} 
+.preview p{ font-size: 1.56rem; line-height: 1.2;}
+
+/* ---------------------------------------------- */
+.bottom-bg{ width: 100vw; position: relative; left: 50%; transform: translateX(-50%); bottom: 0; background: linear-gradient(to bottom, #fff 0%, #8f7e3d 64%, #642a2f 100%);}
+
+.rooms{ width: 80%; margin: auto; margin-bottom: 300px; position: relative;}
+.rooms h1{ margin-bottom: 80px; font-weight: 700;}
+.focus-btn{ font-size: 1.2rem; margin-left: 40px; width: 100px; border-radius: 50px; border: 1px solid #642a2f; background: none;
+    font-family: "GowunDodum",'Noto Sans KR', 'Inter';}
+.focus-btn:hover{ background: #b74750; color: #fff; border: none;}
+.room-list{ width: 90vw; overflow: hidden; position: relative;}
+.room-track{ display: flex; transition: transform 0.5s;}
+.room-card{ width: 80vw; height: 800px; border: 1px solid #bcbcbc;
+     border-radius: 30px; background: #fff; flex-shrink: 0; 
+     overflow: hidden; position: relative;
+     opacity: 0.5; transition: opacity 0.5s; margin-right: 120px;}
+
+.room-card:first-child{ background: #eee; display: flex; align-items: center; justify-content: center;}
+.room-card.active{ opacity: 1; }
+.room-card video{ max-width: 730px; border-radius: 30px;}
+.rocard{ width: 80vw; height: 800px; padding: 70px 150px;}
+.room-controls{ position: absolute; right: calc(20vw - 280px); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 26px;}
+.room-controls button{ width: 50px; height: 50px; border-radius: 50%; border: 1px solid #642a2f; display: flex; align-items: center; justify-content: center; background: none;}
+.room-controls p{ color: #642a2f; font-size: 1.4rem; transform: scaleY(1.8) translateY(-1px);}
+.room-controls button:hover{ background: #642a2f; }
+.room-controls button:hover p{ color: #fff;}
+
+.room-image{ position: absolute; width: 44%; height: 62%; }
+.LP img{ position: absolute; bottom: 60px; left: 180px; width: 20%; border-radius: 50%; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);}
+.room-info{ position: absolute; top: 70px; left: calc(50% + 150px); right: 150px; /* background: red; */}
+.room-info h2{ font-size: 3.4rem; margin-bottom: 20px; letter-spacing: 4px;}
+.room-info p{ font-size: 1.4rem; margin-top: 100px; }
+.tag-box{ display: flex; flex-wrap: wrap;}
+.tag-box span{ display: inline-block; padding: 6px 30px; margin: 10px 10px 10px 0; border-radius: 50px;  font-size: 1.8rem; letter-spacing: 2px;  font-family: "GowunDodum",'Noto Sans KR', 'Inter';} 
+
+.rocard > button{ width: 800px; height: 90px; position: absolute; bottom: 70px; right: 0; border: none; background: #bcbcbc; font-size: 3rem; font-family: "GowunDodum",'Noto Sans KR', 'Inter'; letter-spacing: 2%; text-align: left; padding-left: 30px; border-radius: 10px 0 0 10px; transition: all 2s;}
+.rocard > button span{ display: inline-block; }
+.rocard > button:hover span{ animation: move 2s ease forwards}
+@keyframes move{
+    0%{ transform: translateX(0);}
+    50% { transform: translateX(290%);}
+    100% { transform: translateX(270%);}
+}
+
+.room-card:nth-child(2) .tag-box span { background: #356885; color: #fff;}
+.room-card:nth-child(3) .tag-box span { background: #dd9349; color: #fff;}
+.room-card:nth-child(4) .tag-box span { background: #647d49; color: #fff;}
+.room-card:nth-child(2) button:hover  { background: #356885; color: #fff;}
+.room-card:nth-child(3) button:hover { background: #dd9349; color: #fff;}
+.room-card:nth-child(4) button:hover { background: #647d49; color: #fff;}
+.LP img{ cursor: pointer; }
+.LP img:hover{ animation: spin 2s linear infinite;}
+.LP img.playing{ animation: spin 2s linear infinite;}
+@keyframes spin{
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
+.music-toast{ position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%);
+    background: rgba(0,0,0,0.75); color: #fff; padding: 14px 28px; border-radius: 30px;
+    font-size: 1rem; opacity: 0; transition: opacity 0.4s; pointer-events: none; z-index: 999;}
+.music-toast.show{ opacity: 1;}
+/* ---------------------------------------------- */
+
+.info{ width: 100%; padding-bottom: 600px;}
+.Notice{ margin: auto; display: flex; position: relative;}
+.left-book{ display: block;width: 10vw; height: 900px; background: #342114; border-radius: 0 20px 20px 0;}
+.left-rings{ display: flex; flex-direction: column; gap: 280px; padding: 125px 0; z-index: 999;}
+.ring{ width: 15vw; height: 30px; background: #1c120c; border-radius: 50px; /* margin: 0px 100px 300px 100px; */ position: relative; left: 5vw; }
+
+.right-book{ height: 900px; background: #342114; position: absolute; left: 15vw; right: 10vw; border-radius: 20px; z-index: -1;}
+.page-bg1{ height: 200px; background: #e8e8e8; position: absolute; left: 300px; right: 2vw; top: 11vw; border-radius: 0 0 24px 0; z-index: 4;}
+.page-bg2{ height: 200px; background: #d8d8d8; position: absolute; left: 300px; right: 2vw; top: 18.5vw; border-radius: 0 0 24px 0; z-index: 2;}
+.page-bg3{ height: 200px; background: #fff; position: absolute; left: 300px; right: 2vw; top: 3vw; border-radius: 24px; z-index: 9;}
+.page-main{ /* height: 800px; */ background: #fff; position: absolute; left: 2vw; right: 6vw; top: 3vw; bottom: 3vw; border-radius: 24px; z-index: 999;}
+
+.right-book p{ font-size: 1.3rem; line-height: 1.2;}
+.right-book h2{ font-size: 2rem; margin-bottom: 20px; font-weight: 700;}
+.left-section{ position: absolute; left: 10vw; top: 3vw; }
+.map-box > img{ width: 25vw; position: relative;}
+.mappin .pin1{ width: 54px; position: absolute; top: 5vw; left: 12.5vw; animation: pin 2s ease infinite; }
+.mappin .pin2{ position: absolute; top: 7vw; left: 12.9vw; }
+@keyframes pin{
+    0%{ transform: scale(100%);}
+    50%{ transform: scale(130%);}
+    100%{ transform: scale(100%);}
+}
+.address{ margin: 10px 0; padding-bottom: 70px;}
+.contact p{ font-size: 1.2rem; }
+
+.line{ position: absolute; right: 42vw; top: 100px; height: 700px; border-right: 8px solid #d8d8d8; z-index: 99999;}
+
+.right-section{ position: absolute; right: 10vw; top: 3vw; width: 220px;}
+.info-block{ margin-bottom: 40px;}
+.info-block p{ line-height: 1.4;}
+.info-block ul li{ display: flex; align-items: center; gap: 20px; width: 200px; height: 40px; font-family: "GowunDodum",'Noto Sans KR', 'Inter'; font-size: 1.3rem; }
+/* ---------------------------------------------- */
+
+footer{ width: 100%; height: 450px; background: #342114; margin-top: -180px; position: relative; border-radius: 180px 180px 0 0; z-index: 9;}
+.footer-top{ position: absolute; left: 8vw; top: 5vw; display: flex; flex-direction: column-reverse;}
+.footer-logo img{ width: 87%; position: relative; padding: 40px;}
+.footer-menu{ display: flex; justify-content: center; gap: 60px; width: 100%; color: #fff; font-family: "GowunDodum",'Noto Sans KR', 'Inter'; font-size: 1.3rem;}
+.footer-address p{ position: absolute; left: 53%; transform: translateX(-50%); top: 250px; color: #fff; text-align: left; font-size: 1.2rem;}
+
+.footer-line{ width: 96%; border: none; border-top: 1px solid #fff; position: absolute; left: 2%; bottom: 100px;}
+.footer-row{ display: flex; justify-content: space-between; color: #fff; width: 87%; position: absolute; bottom: 30px; left: 8vw;}
+.footer-row .sns{ position: absolute; right: 8vw;}
+.sns img{ margin-left: 10px;}
+
+/* ============================================================
+   📱 MOBILE  (화면 폭 768px 이하일 때만 적용)
+   ===========================================================
+*/
+@media (max-width: 768px){
+
+    /* ----- 공통 ----- */
+    p{ font-size: 1rem; }
+
+    /* ----- 헤더: 로고 왼쪽 고정 / 오른쪽 햄버거 / 메뉴는 왼쪽 슬라이드 서랍 ----- */
+    .site-wrap{ height: auto; padding: 12px 16px; flex-direction: row;
+        align-items: center; justify-content: space-between; gap: 10px; }
+    .top-logo{ width: 90px; }
+    .hamburger{ display: block; position: relative; z-index: 1100; }   /* 서랍보다 위 → 열고 닫기 */
+
+    /* 왼쪽에서 슬라이드되는 서랍(drawer) */
+    .site-nav{ display: flex; position: fixed; top: 0; left: 0;
+        width: 75%; max-width: 320px; height: 100vh; background: #fff;
+        box-shadow: 4px 0 24px rgba(0,0,0,0.18);
+        flex-direction: column; align-items: flex-start; justify-content: flex-start;
+        gap: 0; padding: 90px 28px; z-index: 1000;
+        transform: translateX(-100%); transition: transform 0.3s ease; }
+    .site-nav.open{ transform: translateX(0); }          /* 햄버거 누르면 슬라이드 인 */
+
+    /* 서랍 뒤 어두운 배경 (누르면 닫힘) */
+    .nav-backdrop{ display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+        z-index: 999; opacity: 0; visibility: hidden; transition: opacity 0.3s; }
+    .nav-backdrop.open{ opacity: 1; visibility: visible; }
+
+    .nav-left{ position: static; transform: none; width: 100%; }
+    .nav-left ul{ width: 100%; flex-direction: column; align-items: flex-start; gap: 0; }
+    .nav-left ul li{ height: auto; width: 100%; }
+    .nav-left ul li a{ height: auto; line-height: 1.4; padding: 14px 0; font-size: 1.3rem; }
+    .nav-right{ margin-left: 0; width: 100%; margin-top: 8px; border-top: 1px solid #eee; padding-top: 8px; }
+    .nav-right > ul{ flex-direction: column; align-items: flex-start; width: 100%; }
+    .nav-right > ul > li{ width: 100%; }
+    .nav-right > ul > li > a{ height: auto; line-height: 1.4; padding: 14px 0; font-size: 1.1rem; }
+
+    /* ----- 배너: 타이틀을 이미지 위에 다시 표시 ----- */
+    .banner{ position: relative; }                          /* title-sub의 기준점 */
+    .banner img{ border-radius: 0 0 40px 40px; }
+    .banner .title-sub{ top: 24%; bottom: auto; right: auto; left: 60%;
+        transform: translateX(-50%); font-size: 1.2rem; width: 100%; text-align: center; }
+    .title2{ position: static; padding-top: 14px; }
+    .main-logo{ padding: 40px 0 80px; display: flex; justify-content: center; }  /* 현재 크기 그대로 화면 정중앙 */
+    .main-logo img{ width: 200%; flex-shrink: 0; }
+
+    /* ----- intro: 룸 3장을 작게(약 30%) 가로 유지 + 호버 상시 표시 ----- */
+    .intro{ width: 90%; margin-bottom: 150px; }
+    .list{ margin: 60px 0 120px; }
+    .list > ul{ gap: 10px; justify-content: center; }
+    .list > ul > li{ width: 36%; }
+    .list-101 img, .list-201 img, .list-301 img{ width: 100%; }
+    .hover-info{ opacity: 1; width: 100%; height:100%; gap: 8px; }   /* 항상 보이게 + 이미지에 딱 맞게 */
+    .hover-info h1{ position: static; transform: none; font-size: 2rem; letter-spacing: 2px; }
+    .hover-info:hover h1{ transform: none; }                 /* 호버 움직임 제거 (모바일) */
+    .hover-info img{ position: static; width: 50px; bottom: auto; right: auto; margin-top: 20px; }  /* 화살표 20px 아래로 */
+    .hover-info img:hover{ animation: none; }                /* 호버 흔들림 제거 (모바일) */
+
+    /* ----- preview: 이미지+글 세로로 ----- */
+    .preview ul{ gap: 60px; }
+    .pr-1, .pr-2{ flex-direction: column; gap: 20px; align-items: stretch; }
+    .preview .pr-1 img, .preview .pr-2 img{ width: 100%; }
+    .preview p{ font-size: 1.2rem; }
+
+    /* ----- rooms 캐러셀: 카드 내부를 세로로 쌓기 ----- */
+    .rooms{ width: 90%; margin: 0 auto 100px; }   /* 좌우 여백 → ROOM 글자 안 잘림 */
+    .rooms h1{ font-size: 1.6rem; margin-bottom: 30px; }
+    .focus-btn{ font-size: 0.9rem; width: 70px; margin-left: 16px; }
+    .room-list{ width: 82vw; margin: 0 auto;
+        overflow: clip; overflow-clip-margin: 50px; }       /* 잘리는 경계를 50px 바깥으로 → 화살표 보임 */
+    .room-card{ width: 82vw; height: auto; margin-right: 40px; }
+    .room-card:first-child video{ max-width: 100%; }
+    .rocard{ width: 100%; height: auto; padding: 20px; }
+
+    .room-image{ position: static; width: 100%; height: auto; border-radius: 16px; }  /* 절대배치 해제 */
+    /* LP: 이미지 오른쪽 위에 절반만 걸치기 */
+    .LP{ position: absolute; top: 70; right: 30px; width: 34%; transform: translateY(-70%); z-index: 5; text-align: initial; }
+    .LP img{ position: static; width: 100%; margin: 0; }
+
+    .room-info{ position: static; left: auto; right: auto; top: auto; margin-top: 16px; }
+    .room-info h2{ font-size: 1.5rem; margin-bottom: 12px; }
+    .room-info p{ font-size: 0.95rem; margin-top: 16px; }
+    .tag-box span{ font-size: 0.9rem; padding: 4px 14px; margin: 4px 6px 4px 0; }
+    .rocard > button{ position: static; width: 100%; height: 56px; font-size: 1.4rem;
+        margin-top: 16px; border-radius: 10px; padding-left: 20px; }
+
+    /* 컨트롤: < 왼쪽 / > 오른쪽, 카드 안쪽에 두어 잘리지 않게 */
+    .room-controls{ top: 50%; bottom: auto; left: -30px; right: -30px; transform: translateY(-50%);
+        flex-direction: row-reverse; justify-content: space-between; gap: 0; padding: 0; z-index: 10; }
+
+    /* ----- info(오시는 길): 책 장식 숨기고 단순 카드로 ----- */
+    .info{ padding-bottom: 120px; }
+    .Notice{ flex-direction: column; align-items: center; }
+    .left-book, .left-rings{ display: none; }                /* 바인더 장식 숨김 (핀은 표시 유지) */
+    .page-bg1, .page-bg2, .page-bg3{ display: none; }        /* 종이 겹침 장식 숨김 */
+    .line{ display: none; }                                  /* 데스크탑 세로선 숨김 (아래 border로 대체) */
+    .right-book{ position: static; height: auto; left: auto; right: auto;
+        width: 92%; margin: 0 auto; background: #fff; z-index: auto; }
+    .page-main{ position: static; left: auto; right: auto; top: auto; bottom: auto; padding: 24px; text-align: left; }
+    .left-section{ position: static; left: auto; top: auto; width: 100%; margin-bottom: 40px; }
+    /* 오른쪽 정보: 운영시간 위에 가로선(90vw) */
+    .right-section{ position: static; left: auto; right: auto; top: auto; width: 80vw; margin: 20px auto 0;
+        border-top: 2px solid #d8d8d8; padding-top: 30px;
+        display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 20px 30px; }   /* 운영시간 옆에 편의시설, 왼쪽정렬 */
+    .right-section .info-block{ width: 42%; }
+    .right-section .info-block:last-child{ width: 100%; }   /* 주의사항: 가로로 넓게 */
+    .map-box > img{ width: 100%; }
+    .right-book p{ font-size: 1.2rem; line-height: 1.6;}
+    .right-book h2{ font-size: 1.4rem; }
+    .info-block ul li{ width: auto; height: 30px; font-size: 1.2rem; margin-bottom: 7px;}
+    .info-block ul li img{ width: 24px; height: 25px;}
+    .mappin .pin1{ width: 54px; position: absolute; top: 23vw; left: 49vw; animation: pin 2s ease infinite; }
+    .mappin .pin2{ position: absolute; top: 28vw; left: 51vw; }
+    .info-block:last-child{}
+
+    /* ----- 푸터: 절대배치 → 세로 흐름 ----- */
+    footer{ height: auto; border-radius: 60px 60px 0 0; margin-top: -60px; padding: 70px 20px 30px; }
+    .footer-top{ position: static; }
+    .footer-logo img{ width: 90vw; padding: 20px; }          /* 로고 원래대로 크게 */
+    .footer-menu{ flex-wrap: wrap; gap: 14px; font-size: 0.85rem; margin-bottom: 20px;}
+    .footer-address{ position: absolute; top: 120px; left: 50%; transform: translateX(-50%); width: 80%; z-index: 2; }  /* 로고 이미지 안쪽으로 (top 값 조절하세요) */
+    .footer-address p{ width: 55%; position: static; transform: none; text-align: left; margin: 0 10px 0 130px; font-size: 0.7rem; color: #fff; }
+    .footer-line{ position: static; width: 90%; margin: 24px auto; }
+    .footer-row{ position: static; flex-direction: column; align-items: center; gap: 16px; width: 100%; }
+    .footer-row .sns{ position: static; }
+}
+
+

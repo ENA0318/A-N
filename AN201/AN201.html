@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A:N 201</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="icon" href="images/logo-simbol.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../AN201/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="site-wrap">
+            <img class="top-logo" src="images/logo-mini.png" alt="">
+            <button class="hamburger" aria-label="menu">☰</button>
+            <div class="nav-backdrop"></div>
+            <div class="site-nav">
+                <div class="nav-left">
+                    <ul>
+                        <li><a href="../index.html">About</a></li>
+                        <li><a href="../AN101/AN101.html" class="active">Rooms</a></li>
+                        <li><a href="">Booking</a></li>
+                        <li><a href="">Notice</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="#">LOGIN</a></li>
+                        <li><a href="#">MY BOOKING</a></li>
+                        <li><a href="#">KO <img src="images/icon5.png" alt=""></a>
+                            <ul class="submenu">
+                                <li><a href="#">KO</a></li>
+                                <li><a href="#">EN</a></li>
+                                <li><a href="#">CH</a></li>
+                                <li><a href="#">JA</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner-music">
+        <div class="banner-wrap">
+            <div class="overlay"></div>
+            <img class="banner" src="images/201_banner.png" alt="">
+            <div class="title-sub">
+                <h1 class="title1">ROOM  201 :</h1>
+                <h1 class="title2">대화와 음악</h1>
+            </div>
+        </div>    
+        <div class="CHECKIN">
+            <ul class="checkin-card">
+                <li class="card">
+                    <div class="card-stripe"></div>
+                    <span class="card-text">Check-in</span>
+               </li> 
+            </ul><div class="slot"></div>
+        </div>
+        <div class="LP-music">
+            <div class="LP"><img src="images/top_music.png" alt=""></div>
+            <div class="top-music">
+                <ul>
+                    <li class="btn-prev"><i class="fa-solid fa-backward-step"></i></li>
+                    <li class="btn-playpause"><i class="fa-solid fa-play"></i></li>
+                    <li class="btn-next"><i class="fa-solid fa-forward-step"></i></li>
+                    <li class="song-title"><span>No Frills Cumbia  -  Jimmy Fontanez</span></li>
+                    <li class="btn-volume"><i class="fa-solid fa-volume-high"></i></li>
+                </ul>
+                <audio id="bgm" src="images/No Frills Cumbia -  Jimmy Fontanez.mp3" loop></audio>
+            </div>
+        </div>
+    </section>
+    <div class="elevator-box">
+        <div class="floor-list up">
+            <a href="../AN301/AN301.html"><div class="floor" data-room="301">301</div></a>
+        </div>
+        <div class="floor active" data-room="201">201</div>
+        <img class="elevator" src="images/elevator.png" alt="">
+        <div class="floor-list down">
+            <a href="../AN101/AN101.html"><div class="floor" data-room="101">101</div></a>
+        </div>
+    </div> 
+    <div class="line"></div>  
+    <section class="intro">
+        <ul class="btn">
+            <li class="btn-a"><a href="../AN101/AN101.html"><span class="arr">&lt;</span>ROOM 101</a></li>
+            <li class="tags"><img src="images/logo-simbol.png" alt=""><p>#Jazz #City Pop <br> #Bossa Nova
+                </p></li>
+            <li class="btn-a"><a href="../AN301/AN301.html">ROOM 301 <span class="arr">&gt;</span></a></li>
+        </ul>
+        <div class="slide">
+            <div class="slide-img">
+                <img src="images/201_1.png" alt="">
+                <img src="images/201_2.png" alt="">
+                <img src="images/201_3.png" alt="">
+            </div>
+            <div class="slide-br">
+                <ul>
+                    <li class="on"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <img src="images/201_aa.png" alt="">
+            <div class="content-text">
+                <p>따뜻하고 아늑한 분위기를 연출하는 선셋 글로우.
+                    <br><br>
+                은은한 조명과 함께 재즈, 시티 팝, 보사노바 등 다양한 음악을 감상할 수 있는 LP 레코드 플레이어가 배치되어 있습니다. 
+                <br>친구나 연인과 함께 대화를 나누며 음악의 선율에 취해보세요.</p><br><br><br><br><br>
+                <p class="text-tag">#아늑한 휴식&nbsp;&nbsp;#재즈&nbsp;&nbsp;#대화 </p>
+                <h1>Sunset Glow</h1>
+            </div>
+        </div>
+    </section>
+    <img class="logo-re logo-re-m" src="images/logo-re.png" alt="">   <!-- 모바일 전용 (PC 숨김) -->
+    <section class="music-con1">
+        <div class="today-music">
+            <div class="today-txt">
+                <h1>TODAY <br>MUSIC</h1>
+                <p>오늘의 추천 음악</p>
+            </div>
+            <div class="today-list">
+                <ul>
+                    <li>Jimmy Fontanez - "No Frills Cumbia"</li>
+                    <li>E's Jammy Jams - "Cloud Patterns"</li>
+                    <li>Doug Maxwell - "Flat One"</li>
+                    <li>The Mini Vandals - "Twisted"</li>
+                    <li>Cheel - "Sunset Dream"</li>
+                </ul>
+                <img src="images/main_music2.png" alt="">
+            </div>
+            <div class="today-box"></div>
+        </div>
+    </section>
+    <section class="music-con2">
+        <div class="to-rankings">
+            <h1>Today's Play Rankings</h1>
+            <div class="search">
+                <input type="text" class="search-input" placeholder="찾으시는 음악을 검색해 보세요.">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="rankings-box">
+                <table class="rankings-table">
+                    <thead>
+                        <tr>
+                            <th></th><th>TRACK</th><th></th><th>ARTIST</th><th>TIME</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>01</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Watching The Clouds</th>
+                            <th>LAKEY INSPIRED</th>
+                            <th>3:42</th>
+                        </tr><tr>
+                            <th>02</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Cloud Patterns</th>
+                            <th>E's Jammy Jams</th>
+                            <th>02:49</th>
+                        </tr><tr>
+                            <th>03</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Twisted</th>
+                            <th>The Mini Vandals</th>
+                            <th>01:55</th>
+                        </tr><tr>
+                            <th>04</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>No Frills Cumbia</th>
+                            <th>Jimmy Fontanez </th>
+                            <th>03:27</th>
+                        </tr><tr>
+                            <th>05</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Bossa Nova</th>
+                            <th>E's Jammy Jams</th>
+                            <th>03:02</th>
+                        </tr><tr>
+                            <th>06</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Sunset Dream</th>
+                            <th>Cheel</th>
+                            <th>02:42</th>
+                        </tr><tr>
+                            <th>07</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Mizuki</th>
+                            <th>Bad Snacks</th>
+                            <th>01:53</th>
+                        </tr><tr>
+                            <th>08</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Light Thought var 4</th>
+                            <th>Vibe Mountain</th>
+                            <th>03:26</th>
+                        </tr><tr>
+                            <th>09</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Oshawa</th>
+                            <th>The 126ers</th>
+                            <th>03:21</th>
+                        </tr><tr>
+                            <th>10</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Watching The Clouds</th>
+                            <th>LAKEY INSPIRED</th>
+                            <th>3:42</th>
+                        </tr><tr>
+                            <th>11</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Cloud Patterns</th>
+                            <th>E's Jammy Jams</th>
+                            <th>02:49</th>
+                        </tr><tr>
+                            <th>12</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Twisted</th>
+                            <th>The Mini Vandals</th>
+                            <th>01:55</th>
+                        </tr><tr>
+                            <th>13</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>No Frills Cumbia</th>
+                            <th>Jimmy Fontanez </th>
+                            <th>03:27</th>
+                        </tr><tr>
+                            <th>14</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Bossa Nova</th>
+                            <th>E's Jammy Jams</th>
+                            <th>03:02</th>
+                        </tr><tr>
+                            <th>15</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Sunset Dream</th>
+                            <th>Cheel</th>
+                            <th>02:42</th>
+                        </tr><tr>
+                            <th>16</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Mizuki</th>
+                            <th>Bad Snacks</th>
+                            <th>01:53</th>
+                        </tr><tr>
+                            <th>17</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Light Thought var 4</th>
+                            <th>Vibe Mountain</th>
+                            <th>03:26</th>
+                        </tr><tr>
+                            <th>18</th>
+                            <th><div style="width:60px; height:60px; background:#e5e5e5;"></div></th>
+                            <th>Oshawa</th>
+                            <th>The 126ers</th>
+                            <th>03:21</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="Apply">
+                <p>음악 신청하기</p>
+            </div>
+        </div>
+    </section>
+    <img class="logo-re" src="images/logo-re.png" alt="">
+    <footer>
+        <div class="footer-top">
+            <div class="footer-logo"><img src="images/logo-footer.png" alt=""></div>
+            <ul class="footer-menu">
+                <li>고객센터</li>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>이메일무단수집금지</li>
+            </ul>
+        </div>
+        <div class="footer-address">
+            <p>서울 성동구 성수일로56 (04782) (주)A:N 대표이사 김철수  |  T.02.1234.4567 <br>
+                사업자등록번호 123-45-67891  |  통신판매번호 2020-00-2020</p>
+        </div>
+        <hr class="footer-line">
+        <div class="footer-row">
+            <p>COPYRIGHT ⓒ</p>
+            <div class="sns">
+                <img src="images/sns (1).png" alt="">
+                <img src="images/sns (2).png" alt="">
+                <img src="images/sns (3).png" alt="">
+                <img src="images/sns (4).png" alt="">
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/jquery-4.0.0.min.js"></script>
+<script src="../AN201/js/main.js"></script>
+</body>
+</html>
