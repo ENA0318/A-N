@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-        html{ scroll-behavior: smooth; background: #fff; }
+        html{ scroll-behavior: smooth;  background: #fff; }
         *{margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
         a{ text-decoration: none; color: #222;}
         @font-face{ font-family: GowunDodum;  src: url(../../font/Gowun_Dodum/GowunDodum-Regular.ttf);}
@@ -269,7 +269,7 @@ footer{ width: 100%; height: 450px; background: #342114; margin-top: 200px; posi
     .title2{ position: static; padding-top: 8px; }
 
     /* 체크인 카드: 배너가 낮아져서 통째로 축소 */
-    .CHECKIN{ top: auto; bottom: 26%; right: 4%; transform: scale(0.5); transform-origin: right bottom; }
+    .CHECKIN{ top: auto; bottom: 26%; right: calc(4% - 20px); transform: scale(0.5); transform-origin: right bottom; }   /* 오른쪽으로 20px 이동 */
 
     /* 음악 플레이어 바: 낮고 컴팩트하게 */
     .LP-music{ height: 40px; }
@@ -297,7 +297,9 @@ footer{ width: 100%; height: 450px; background: #342114; margin-top: 200px; posi
     .intro{ width: 90%; }
     .btn{ height: auto; flex-wrap: wrap; justify-content: space-between; width: 100vw; position: relative; left: 50%; transform: translateX(-50%); padding: 0 12px; }
     .btn li{ padding: 12px 18px 10px; font-size: 1rem; border-radius: 14px; line-height: 1.4; margin: auto 10px; letter-spacing: 0;}
-    .btn li.btn-a{ width: 150px; justify-content: center; padding-left: 0; padding-right: 0; }   /* 모바일: 같은 폭 */
+    .btn li.btn-a{ width: 150px; padding-left: 0; padding-right: 0; }   /* 모바일: 같은 폭 */
+    .btn li.btn-a:first-child{ justify-content: flex-start; padding-left: 20px; }   /* 왼쪽 버튼: a가 왼쪽으로 20px 쏠림 */
+    .btn li.btn-a:last-child{ justify-content: flex-end; padding-right: 20px; }     /* 오른쪽 버튼: a가 오른쪽으로 20px 쏠림 */
     .btn li.tags{ margin: 0; order: 3; position: absolute; top: 0%; left: 50%; transform: translateX(-50%);
         flex-direction: column; }        /* 이미지 위, 태그 아래로 세로 배치 */
     .btn li.tags img{ width: 44px; }
@@ -327,8 +329,8 @@ footer{ width: 100%; height: 450px; background: #342114; margin-top: 200px; posi
     .content img{ width: 100%; display: block;}
     .content-text{ width: 90%; margin: 40px auto 0; position: static; }
     .content h1{ position: absolute; right: 18px; top: 210px; margin: 0; font-size: 3rem; text-align: right; z-index: 10;}
-    .content p{ margin-top: -90px; text-align: center; }
-    .content .text-tag{ font-size: 1.4rem; margin-top: 20px;text-align: center; }
+    .content p{ margin-top: -90px; text-align: center; font-size: 0.8rem;}
+    .content .text-tag{ font-size: 1.2rem; margin-top: 20px;text-align: center; }
     .card-text > br{ display: none;}
 
     /* 모바일 전용 로고 표시 */
@@ -366,11 +368,14 @@ footer{ width: 100%; height: 450px; background: #342114; margin-top: 200px; posi
     /* ----- 푸터 (메인 페이지와 동일 패턴) ----- */
     footer{ height: auto; border-radius: 60px 60px 0 0; margin-top: 100px; padding: 70px 20px 30px; }
     .footer-top{ position: static; }
-    .footer-logo img{ width: 90vw; padding: 20px; }
-    .footer-menu{ flex-wrap: wrap; gap: 14px; font-size: 0.85rem; margin-bottom: 20px; }
-    .footer-address{ position: absolute; top: 120px; left: 50%; transform: translateX(-50%); width: 80%; z-index: 2; }
-    .footer-address p{ width: 55%; position: static; transform: none; text-align: left; margin: 0 10px 0 130px; font-size: 0.7rem; color: #fff; }
+    .footer-logo img{ width: 90vw; padding: 20px; }          /* 로고 원래대로 크게 */
+    .footer-menu{ flex-wrap: wrap; gap: 14px; font-size: 0.7rem; margin-bottom: 20px;}
+    .footer-address{ position: absolute; top: 120px; left: 50%; transform: translateX(-50%); width: 80%; z-index: 2; }  /* 로고 이미지 안쪽으로 (top 값 조절하세요) */
+    .footer-address p{ width: 48%; position: static; transform: none; text-align: left; margin: 0 10px 0 105px; font-size: 0.6rem; color: #fff; }
     .footer-line{ position: static; width: 90%; margin: 24px auto; }
     .footer-row{ position: static; flex-direction: column; align-items: center; gap: 16px; width: 100%; }
+    .footer-row p{font-size: 0.6rem;}
     .footer-row .sns{ position: static; }
+    .sns img{ margin-left: 20px;}
+    .sns img:first-child{ margin: 0;}
 }
