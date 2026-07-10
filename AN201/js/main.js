@@ -83,4 +83,12 @@
 
     /* 창 크기 바뀌면 위치 재계산 */
     $(window).on("resize", slideUpdate);
+
+    /* ===== TOP 버튼: 스크롤 내리면 등장, 클릭 시 맨 위로 ===== */
+    $(window).on("scroll", function(){
+        $(".top-btn").toggleClass("show", $(this).scrollTop() > 300);
+    });
+    $(".top-btn").on("click", function(){
+        $("html, body").animate({ scrollTop: 0 }, 500);
+    });
 });

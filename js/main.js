@@ -48,7 +48,7 @@ function stopAuto(){
 
 // hover는 실제 마우스가 있는 기기(데스크톱)에서만 — 모바일 터치와 충돌 방지
 if(window.matchMedia("(hover: hover)").matches){
-    $(".rocard-inner, .room-card:first-child video").hover(stopAuto, startAuto);
+    $(".rocard-inner, .room-card:first-child video, .rocard > button").hover(stopAuto, startAuto);   // 체크인 버튼도 포함 (PC hover)
 }
 
 startAuto();   // 페이지 로드 시 자동 시작
@@ -67,9 +67,10 @@ $(".room-track").on("click", ".room-card.active", function(){
     }
 });
 
-        // 카드 안의 버튼 클릭은 슬라이드로 번지지 않게
+        // 카드 안의 버튼 클릭은 슬라이드로 번지지 않게 + 자동 슬라이드도 멈춤 (모바일 대응)
         $(".room-card button").on("click", function(e){
             e.stopPropagation();
+            stopAuto();
         });
 
         // 창 크기가 바뀌면 위치 다시 계산
@@ -117,6 +118,14 @@ $(".room-track").on("click", ".room-card.active", function(){
             const audio = $(this).siblings("audio")[0];
             audio.pause();
             audio.currentTime = 0;
+        });
+
+        /* ===== TOP 버튼: 스크롤 내리면 등장, 클릭 시 맨 위로 ===== */
+        $(window).on("scroll", function(){
+            $(".top-btn").toggleClass("show", $(this).scrollTop() > 300);   // 300px 넘게 내리면 나타남
+        });
+        $(".top-btn").on("click", function(){
+            $("html, body").animate({ scrollTop: 0 }, 500);   // 0.5초 동안 부드럽게 맨 위로
         });
 
     });

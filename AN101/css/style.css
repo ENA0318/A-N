@@ -225,6 +225,19 @@ footer{ width: 100%; height: 450px; background: #342114; margin-top: 200px; posi
 .footer-row .sns{ position: absolute; right: 8vw;}
 .sns img{ margin-left: 10px;}
 
+/* ---------- TOP 버튼: 오른쪽 하단 고정, 스크롤 시 등장 ---------- */
+.top-btn{ position: fixed; right: 30px; bottom: 30px; width: 45px; height: 45px;
+    background: #fff; border: 1px solid #ccc; border-radius: 16px;
+    cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.08); z-index: 998;
+    opacity: 0; visibility: hidden; transition: opacity 0.3s, border-color 0.2s, box-shadow 0.2s;}
+.top-btn.show{ opacity: 1; visibility: visible;}   /* 스크롤 내리면 나타남 */
+.top-btn::before{   /* border로 그린 chevron (^) 화살표 */
+    content: ""; display: block; width: 10px; height: 10px;
+    border-top: 2px solid #888; border-left: 2px solid #888;
+    transform: rotate(45deg); margin: 4px auto 0;}
+.top-btn:hover{ border-color: #642a2f; box-shadow: 0 6px 18px rgba(0,0,0,0.15);}
+.top-btn:hover::before{ border-color: #642a2f;}
+
 /* ============================================================
    📱 MOBILE  (화면 폭 768px 이하일 때만 적용)
    ===========================================================
