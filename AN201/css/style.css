@@ -49,7 +49,7 @@ header { position: fixed; top: 0; left: 0; width: 100%; height: 50px; z-index: 1
 .title1, .title2{ font-size: 42px; font-weight: 500; z-index: 4;}
 .title2{ position: absolute; left: 100px; padding-top: 20px;}
 
-.banner-music .wave{ position: absolute; left: 0; bottom: -1px; width: 100%; height: 80px; z-index: 4; pointer-events: none;}
+.banner-music .wave{ position: absolute; left: 0; bottom: -11px; width: 100%; height: 90px; z-index: 4; pointer-events: none;}
 .banner-music .wave svg{ width: 100%; height: 100%; display: block;}
 
 .CHECKIN{ position: absolute; top: 420px; right: 180px; z-index: 999;}
@@ -268,7 +268,7 @@ footer{ position: relative; z-index: 10; margin-top: 120px; padding: 55px 100px 
     .banner{ height: 500px; object-fit: cover;}
     .banner-wrap{ overflow: hidden; }
     .overlay{ border-radius: 0 0 40px 40px; }
-    .banner-music .wave{ height: 40px; bottom: -8px;}
+    .banner-music .wave{ height: 45px; bottom: -13px;}
     .banner-music .wave svg{ display: block; width: 100%; height: 100%;}
     .banner-music .wave::after{ content: ""; position: absolute; left: -2px; right: -2px; bottom: 0; height: 14px; background: #fff; pointer-events: none;}
     .banner-music .title-sub{ width: auto; top: 160px; left: 8%; font-size: 18px; }
